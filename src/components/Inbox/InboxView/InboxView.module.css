@@ -1,0 +1,26 @@
+.inbox__container {
+    width: 100%;
+    padding: 0rem 1rem 1rem 1rem;
+}
+
+.inbox__view {
+    display: flex;
+    align-items: center;
+    padding: .21rem .2rem;
+    background: #fffcf2;
+    width: 65px;
+    border-radius: .2rem;
+    box-shadow: 0 1px 1px .1rem rgba(0, 0, 0, .7);
+}
+
+.view {
+    padding: .2rem .23rem 0rem;
+    cursor: pointer;
+}
+
+.view__1 {
+    margin-right: .21rem;
+    background-color: #f6f6f6;
+    border: 1px solid #ccc;
+    border-radius: .2rem;
+}

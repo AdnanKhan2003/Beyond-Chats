@@ -1,0 +1,32 @@
+
+.inbox__message {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    padding: 1rem 1rem;
+    border-radius: .3rem;
+}
+
+.inbox__message:hover,
+.active {
+    background-color: whitesmoke;
+}
+
+
+.message__profile img {
+    max-width: 100%;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.message__info {
+    padding: 0 .815rem;
+}
+
+.message__time {
+    align-self: flex-end;
+    padding-bottom: .631rem;
+}
+

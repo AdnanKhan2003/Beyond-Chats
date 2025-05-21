@@ -1,0 +1,38 @@
+.details__info__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .41rem 0;
+}
+
+.details__properties {
+    font-size: 1rem;
+    color: #777;
+}
+
+.details__value__container {
+    display: flex;
+    align-items: flex-end;
+}
+
+.details__value__icon {
+    width: 1.6rem;
+    height: 1.5rem;
+    display: block;
+    position: relative;
+    margin-right: .6rem;
+}
+
+.details__value__icon img {
+    max-width: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.details__value {
+    font-weight: bold;
+    align-self: self-start;
+}

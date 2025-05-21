@@ -1,0 +1,16 @@
+.inbox__filters {
+    display: flex;
+    align-items: center;
+    padding: 1rem 1rem;
+}
+
+.open,
+.waiting {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.open {
+    margin-right: 1rem;
+}

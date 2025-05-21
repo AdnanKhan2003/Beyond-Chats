@@ -1,0 +1,26 @@
+.aichat__container {
+    width: 100%;
+    /* max-width: 250px; */
+    max-width: 300px;
+    background-color: white;
+    border-top-right-radius: .3rem;
+    border-bottom-right-radius: .3rem;
+    max-height: 750px;;
+}
+
+.aichat__wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: .4rem 1rem;
+}
+
+.aichat__upper{
+    /* overflow: scroll; */
+}
+.scroll{
+    overflow: scroll;
+}
+

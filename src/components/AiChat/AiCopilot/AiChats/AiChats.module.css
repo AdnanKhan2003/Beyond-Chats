@@ -1,0 +1,111 @@
+.message__content__box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 1.3rem 0;
+}
+
+.blank__space,
+.message__content__box__header  {
+    width: 2rem;
+    height: 2rem;
+    margin-right: .471rem;
+    display: flex;
+}
+
+
+.message__content__box__header svg  {
+    font-size: 1.4rem;
+    width: 100%;
+}
+
+.message__content__box__header .message__image {
+    max-width: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.message__content__box__container {
+    display: flex;
+}
+
+.message {
+    color: #555;
+}
+
+.message__ai {
+    background-image: linear-gradient(to right, pink , white);
+    margin-top: .71rem;
+    margin-left: .61rem;
+    padding: .53rem .97rem;
+    border-radius: .3rem;
+    color: #444;
+}
+
+.message__part {
+    padding: .31rem 0;
+}
+
+.message__part__more__info {
+    background-color: blue;
+    border-radius: 50%;
+    color: #fff;
+    padding: .1rem .3rem;
+    margin-left: .3rem;
+    font-size: .78rem;
+    cursor: pointer;
+}
+
+.message__ai__button__container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    background-color: white;
+    padding: .471rem 1rem;
+    border-radius: .3rem;
+    font-size: 1rem;
+    cursor: pointer;
+    margin: 1rem 0;
+}
+
+.btn__left span svg {
+    font-size: 1.1rem;
+}
+
+.btn__right {
+    border-left: 1px solid #ccc;
+    padding-left: .45rem;
+}
+
+.btn__left button {
+    border: none;
+    cursor: pointer;
+    outline: none;
+    background-color: transparent;
+    font-size: 1rem;
+    margin-left: .41rem;
+}
+
+.sources__list {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    margin: .61rem 0;
+}
+
+.message__sources {
+    margin-top: 1rem;
+    font-size: .9rem;
+    color: #444;
+}
+
+.message__sources__title {
+    color: #666;
+    font-size: .91rem;
+}
+
+.sources__icon {
+    margin-right: .3rem;
+    color: rgb(81, 130, 223);
+}

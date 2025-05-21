@@ -1,0 +1,36 @@
+.userchat__header {
+    width: 100%;
+}
+
+.userchat__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .41rem 1rem;
+}
+
+.nav__right {
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    font-size: 1.1rem;
+    margin-left: 1rem;
+    background-color: whitesmoke;
+    padding: .2rem .5rem;
+    border-radius: .3rem;
+    cursor: pointer;
+}
+
+.icon__3 {
+    padding: .3rem .7rem;
+    display: flex;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+}
+
+.icon__3 svg {
+    margin-right: .31rem;
+}

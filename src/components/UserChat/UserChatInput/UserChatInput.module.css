@@ -1,0 +1,91 @@
+.userchat__input__container{
+    width: 100%;
+}
+
+.userchat__input__wrapper{
+    width: 100%;
+}
+
+.userchat__input {
+    border: 1px solid #eee;
+    border-radius: .3rem;
+    padding: .73rem .7rem;
+}
+
+.userchat__input__option{
+    display: flex;
+    align-items: center;
+}
+
+.userchat__input__option .icon svg,
+.userchat__input__option .text {
+    font-size: 1rem;
+}
+
+.text {
+    margin: 0 .25rem 0 .18rem;
+    margin-bottom: .51rem;
+}
+
+.userinput__box {
+    width: 100%;
+    padding: .3rem .7rem;
+    border: none;
+    outline: none;
+    background-color: #fff;
+    border-radius: .3rem;
+    font-size: 1rem;
+    resize: none;
+}
+
+.userinput__EmojisAndSendBtn__left {
+    display: flex;
+    align-items: center;
+}
+
+.vertical__line {
+    width: 2px;
+    height: 19px;
+    background: #777;
+    margin-bottom: .32rem;
+}
+
+.userinput__EmojisAndSendBtn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.input__icon svg,
+.userinput__EmojisAndSendBtn__left .vertical__line {
+    font-size: 1rem;
+    cursor: pointer;
+    margin-right: .581rem;
+}
+
+.button__send__container {
+    background: whitesmoke;
+    padding: .3rem .7rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.btn__send {
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.btn__send__icon {
+    font-size: .71rem;
+    padding: .2rem 0 0 .2rem;
+}
+
+.button__send__container .vertical__line {
+    width: 2px;
+    height: 15px;
+    background: #ccc;
+    margin-bottom: .12rem;   
+    margin-left: .212rem;   
+}

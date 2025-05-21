@@ -1,0 +1,25 @@
+.aichat__input__wrapper {
+    padding: 0 1rem 1rem;
+}
+
+.label__suggestion {
+    background-color: rgb(238, 232, 232);
+    padding: .4rem .8rem;
+    border-radius: .3rem;
+    margin: 1rem 0;
+}
+
+.aiInput__container {
+    border: 1px solid #ccc;
+    border-radius: .3rem;
+    display: flex;
+    padding: .6rem 1rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.aichat__input {
+    border: none;
+    outline: none;
+    font-size: .91rem;
+}

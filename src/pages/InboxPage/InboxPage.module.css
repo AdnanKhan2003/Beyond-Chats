@@ -1,0 +1,24 @@
+.inbox__container{
+    border-top-left-radius: .3rem;
+    border-bottom-left-radius: .3rem;
+    background: white;
+    max-width: 300px;
+    max-height: 750px;
+}
+
+.inbox__wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.inbox__messages__container {
+    display: flex;
+    flex-direction: column;
+    padding: 1.1rem 0rem 8rem;
+    overflow: scroll;
+}
+
+

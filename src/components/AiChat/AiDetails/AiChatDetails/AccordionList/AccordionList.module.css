@@ -1,0 +1,10 @@
+.details__accordion__list {
+    padding: .863rem 1rem;
+    /* border-bottom: .1px solid #ccc; */
+    background-color: whitesmoke;
+    margin: .15rem 0;
+}
+
+/* .details__accordion__list:first-child {
+    border-top: .1px solid #ccc;
+} */
