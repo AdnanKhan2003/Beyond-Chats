@@ -1,19 +1,17 @@
-.userchat__container {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  padding: 2.4rem 0;
-}
-/* 
 .message {
     display: flex;
     align-items: flex-end;
+    margin: .81rem 0;
+}
+
+.message__sender {
+    align-self: flex-end;
 }
 
 .message__receiver {
     align-self: flex-start;
-} */
-/* 
+}
+
 .message__user__pic {
     width: 2rem;
     margin-right: .71rem;
@@ -25,26 +23,26 @@
     object-fit: cover;
     max-width: 100%;
     border-radius: 50%;
-} */
+}
 
-/* .message__container{
+.message__container{
     background-color: rgb(194, 194, 243);
     padding: .53rem 1rem;
     border-radius: .53rem;
-} */
+}
 
-/* .message__content {
+.message__content {
     text-align: start;
-} */
+}
 
-/* .message__time__container {
+.message__time__container {
     display: flex;
     align-items: center;
     justify-content: flex-end;
     color: #555;
     padding: .2rem 0 0 0;
-} */
+}
 
-/* .time {
+.time {
     margin-left: .81rem;
-} */
+}

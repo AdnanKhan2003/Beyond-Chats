@@ -10,12 +10,14 @@ import InboxMessage from "../../components/Inbox/InboxMessage/InboxMessage";
 import InboxView from "../../components/Inbox/InboxView/InboxView";
 
 import styles from "./InboxPage.module.css";
+import { useState } from "react";
 
 // UserIcon={tomLogo} userName="John" time={48}>Hey, I wanted to say..<
 // const INBOX__MESSAGE__PROFILES = [
 //   'John', 'Tom', "Francis", "George"
 // ];
 
+// type, userImg, msgContent, status, time 
 const INBOX__MESSAGE__PROFILES_CONTENT = [
   {
     id: 0,
@@ -24,6 +26,24 @@ const INBOX__MESSAGE__PROFILES_CONTENT = [
     time: 48,
     message:
       "Hey, I wanted to ask you about the latest push I made to the GitHub",
+    chat: [
+      {
+        type: 'sender',
+        userImg: aliLogo,
+        msgContent: "Hey Receiver!",
+        status: 'Seen',
+        time: 48,
+        timeUnit: 'min',
+      },
+      {
+        type: 'sender',
+        userImg: aliLogo,
+        msgContent: "Hey Sender!",
+        status: 'Seen',
+        time: 48,
+        timeUnit: 'min',
+      }
+    ],
     active: true,
   },
   {
@@ -52,7 +72,19 @@ const INBOX__MESSAGE__PROFILES_CONTENT = [
   },
 ];
 
-const InboxPage = () => {
+const InboxPage = ({ profiles }) => {
+  const [activeProfileId, setActiveProfileId] = useState(0);
+
+  const handleProfileClick = (profileId) => {
+    console.log(profileId);
+    INBOX__MESSAGE__PROFILES_CONTENT.forEach(profile => {
+      if(profile.id === profileId) {
+        setActiveProfileId(profile.id);
+      } 
+    });
+    
+  };
+
   return (
     <div className={`${styles.inbox__container}`}>
       <div className={`${styles.inbox__wrapper}`}>
@@ -62,8 +94,8 @@ const InboxPage = () => {
 
           {/* 3. Inbox Messages */}
           <div className={`${styles.inbox__messages__container}`}>
-            {INBOX__MESSAGE__PROFILES_CONTENT.map((profile) => (
-              <InboxMessage key={profile.id} data={profile} />
+            {profiles.map((profile) => (
+              <InboxMessage key={profile.id} data={profile} activeProfileId={activeProfileId} onClick={handleProfileClick} />
             ))}
           </div>
         </div>

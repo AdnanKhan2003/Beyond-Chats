@@ -3,13 +3,13 @@ import tomLogo from '../../../assets/images/users/tom.jpg';
 
 import styles from './InboxMessage.module.css';
 
-const InboxMessage = ({ data: {id, UserIcon, username, time, message, active} }) => {
+const InboxMessage = ({ data: {id, UserIcon, username, time, message, active}, activeProfileId, onClick }) => {
     time = +time;
     message = message.slice(0, 20).padEnd(24, '...');
 
   
     return (
-        <div className={`${styles.inbox__message} ${active ? styles.active : ""}`} >
+        <div onClick={() => onClick(id)} className={`${styles.inbox__message} ${activeProfileId === id ? styles.active : ""}`} >
             <div className={`${styles.message__profile}`}>
                 <img src={UserIcon} alt="Persona" />
             </div>

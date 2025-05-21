@@ -11,7 +11,7 @@ const UserChatPage = () => {
 
         <div className="userchat__lower">
           {/* UserChats */}
-          <UserChats />
+          <UserChats  />
 
           {/* UserChatInput */}
           <UserChatInput />
