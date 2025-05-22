@@ -72,18 +72,7 @@ const INBOX__MESSAGE__PROFILES_CONTENT = [
   },
 ];
 
-const InboxPage = ({ profiles }) => {
-  const [activeProfileId, setActiveProfileId] = useState(0);
-
-  const handleProfileClick = (profileId) => {
-    console.log(profileId);
-    INBOX__MESSAGE__PROFILES_CONTENT.forEach(profile => {
-      if(profile.id === profileId) {
-        setActiveProfileId(profile.id);
-      } 
-    });
-    
-  };
+const InboxPage = ({ profiles, activeProfileId, onClick }) => {
 
   return (
     <div className={`${styles.inbox__container}`}>
@@ -95,7 +84,7 @@ const InboxPage = ({ profiles }) => {
           {/* 3. Inbox Messages */}
           <div className={`${styles.inbox__messages__container}`}>
             {profiles.map((profile) => (
-              <InboxMessage key={profile.id} data={profile} activeProfileId={activeProfileId} onClick={handleProfileClick} />
+              <InboxMessage key={profile.id} data={profile} activeProfileId={activeProfileId} onClick={onClick} />
             ))}
           </div>
         </div>
