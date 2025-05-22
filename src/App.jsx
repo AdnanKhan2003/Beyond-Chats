@@ -30,13 +30,13 @@ const INBOX__MESSAGE__PROFILES_CONTENT = [
         timeUnit: 'min',
       },
       {
-        type: 'sender',
-        userImg: aliLogo,
+        type: 'receiver',
+        userImg: johnLogo,
         msgContent: "Hey Sender!",
         status: 'Seen',
         time: 48,
         timeUnit: 'min',
-      }
+      },
     ],
     active: true,
   },
@@ -57,8 +57,8 @@ const INBOX__MESSAGE__PROFILES_CONTENT = [
         timeUnit: 'min',
       },
       {
-        type: 'sender',
-        userImg: aliLogo,
+        type: 'receiver',
+        userImg: tomLogo,
         msgContent: "Hey Sender!",
         status: 'Seen',
         time: 48,
@@ -83,7 +83,7 @@ const INBOX__MESSAGE__PROFILES_CONTENT = [
         timeUnit: 'min',
       },
       {
-        type: 'sender',
+        type: 'receiver',
         userImg: aliLogo,
         msgContent: "Hey Sender!",
         status: 'Seen',
@@ -109,8 +109,8 @@ const INBOX__MESSAGE__PROFILES_CONTENT = [
         timeUnit: 'min',
       },
       {
-        type: 'sender',
-        userImg: aliLogo,
+        type: 'receiver',
+        userImg: rajLogo,
         msgContent: "Hey Sender!",
         status: 'Seen',
         time: 48,
@@ -118,10 +118,20 @@ const INBOX__MESSAGE__PROFILES_CONTENT = [
       }
     ],
   },
+
 ];
+ 
+const init__profile__inputs = {};
+INBOX__MESSAGE__PROFILES_CONTENT.forEach(profile => {
+  init__profile__inputs[profile.id] = ""
+})
+
+
+
 
 function App() {
   const [activeProfileId, setActiveProfileId] = useState(0);
+  const [profileInputs, setProfileInputs] = useState(init__profile__inputs);
 
   const handleProfileClick = (profileId) => {
     INBOX__MESSAGE__PROFILES_CONTENT.forEach(profile => {
@@ -129,13 +139,49 @@ function App() {
         setActiveProfileId(profile.id);
       } 
     });
-    
   };
+
+  // const handleAddMsgToChat = (chatMsg, activeProfileId) => {
+    // {
+    //   type: 'sender',
+    //   userImg: aliLogo,
+    //   msgContent: "Hey! I just wanted to ask about that talk that we once listened to, Remember? If you then please consider calling me",
+    //   status: 'Seen',
+    //   time: 48,
+    //   timeUnit: 'min',
+    // },
+
+    // const chatMessage = {
+    //   type: 'sender',
+    //   userImg: INBOX__MESSAGE__PROFILES_CONTENT[activeProfileId].UserIcon,
+    //   msgContent: chatMsg,
+    //   status: 'Sent',
+    //   time: Date.now(),
+    //   timeUnit: 'min'
+    // };
+    // INBOX__MESSAGE__PROFILES_CONTENT[activeProfileId].chat.push(chatMessage);
+    
+    const handleAddMsgToChat = (chatMsg, activeProfileId) => {
+      const newMsg = {
+        type: 'sender',
+        userImg: aliLogo,
+        msgContent: chatMsg,
+        status: 'Sent',
+        time: new Date().getMinutes(),
+        timeUnit: 'min'
+      };
+    
+      INBOX__MESSAGE__PROFILES_CONTENT[activeProfileId].chat.push(newMsg);
+      
+    };
+    
+    
+  // };
 
   return (
     <div className={styles.app}>
       <InboxPage profiles={INBOX__MESSAGE__PROFILES_CONTENT} activeProfileId={activeProfileId} onClick={handleProfileClick} />
-      <UserChatPage />
+      <UserChatPage profileInputs={profileInputs} updateProfileInputs={setProfileInputs} profiles={INBOX__MESSAGE__PROFILES_CONTENT} activeProfileId={activeProfileId} onAddMsg={handleAddMsgToChat} />
       <AiChatPage />
     </div>
   )

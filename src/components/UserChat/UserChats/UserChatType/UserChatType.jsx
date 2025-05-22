@@ -4,9 +4,11 @@ import styles from "./UserChatType.module.css";
 
 const UserChatType = ({ type, userImg, msgContent, status, time }) => {
     let userTypeClass = `message__${type}`;
+    // console.log(type, userImg, msgContent, status, time);
+    
 
   return (
-    <div className={`${styles.message} ${styles[userTypeClass]}`}>
+    <div className={`${styles.message} ${styles[userTypeClass] || ''}`}>
       <div className={`${styles.message__user__pic}`}>
         <img src={userImg} alt="" />
       </div>

@@ -7,19 +7,22 @@ import tomLogo from "../../../assets/images/users/tom.jpg";
 
 import styles from "./UserChats.module.css";
 
-const UserChats = () => {
-  // type: 'sender',
+ // type: 'sender',
   // userImg: aliLogo,
   // msgContent: "Hey Receiver!",
   // status: 'Seen',
   // time: 48,
   // timeUnit: 'min',
+
+const UserChats = ({ profiles }) => {
+
   return (
     <div className={`${styles.userchat__container}`}>
-     
-      <UserChatType type="sender" userImg={aliLogo} msgContent="asdfklj dsfjadfslj ldjsflj" status="Seen" time="48" />
+      
 
-      <UserChatType type="receiver" userImg={tomLogo} msgContent="asdfklj dsfjadfslj ldjsflj asdfklj dsfjadfslj ldjsflj asdfklj dsfjadfslj ldjsflj" time="48" />
+      {profiles.chat.map((profile, i) => {
+        return <UserChatType key={i+i} type={profile.type} userImg={profile.userImg} msgContent={profile.msgContent} status={profile.status} time={profile.time} />;
+      })}
 
     </div>
   );

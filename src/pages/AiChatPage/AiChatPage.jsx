@@ -19,12 +19,12 @@ const AiChatPage = () => {
   return (
     <div className={`${styles.aichat__container}`}>
       <div className={`${styles.aichat__wrapper}`}>
+          <AiChatHeader onClick={handleTabClick} initTab={initTab} />
         <div className={`${styles.aichat__upper} ${setInitTab ? styles.scroll : ''}`}>
           {/* AiChat Header */}
-          <AiChatHeader onClick={handleTabClick} initTab={initTab} />
 
           {/* AiChat Chats */}
-          {initTab && <AiChats />}
+          {initTab && <AiChats  />}
           {!initTab && <AiChatDetails />}
         </div>
 

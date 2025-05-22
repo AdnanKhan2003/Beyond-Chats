@@ -5,8 +5,17 @@ import { MdBookmarks } from "react-icons/md";
 import { MdEmojiEmotions } from "react-icons/md";
 
 import styles from "./UserChatInput.module.css";
+import { useState } from "react";
 
-const UserChatInput = () => {
+const UserChatInput = ({ onSubmitMsg, activeProfileId, onInputChange, inputValue }) => {
+  // const [chatMessage, setChatMessage] = useState();
+
+  const handleClickSubmit = () => {   
+    onSubmitMsg(inputValue, activeProfileId);
+    onInputChange("")
+  };
+
+
   return (
     <div className={`${styles.userchat__input__container}`}>
       <div className={`${styles.userchat__input__wrapper}`}>
@@ -23,10 +32,13 @@ const UserChatInput = () => {
 
           <textarea
             name="userInput"
+            onChange={(e) => onInputChange(e.target.value)}
+            value={inputValue}
             className={`${styles.userinput__box}`}
             rows="4"
             placeholder="Use 30K for shortcuts"
           ></textarea>
+            
 
           <div className={`${styles.userinput__EmojisAndSendBtn}`}>
             <div className={`${styles.userinput__EmojisAndSendBtn__left}`}>
@@ -43,8 +55,13 @@ const UserChatInput = () => {
               </span>
             </div>
             <div className="userinput__EmojisAndSendBtn__right">
-              <div className={`${styles.button__send__container}`}>
-                <button type="submit" className={`${styles.btn__send}`}>
+              <div 
+                onClick={handleClickSubmit}
+               className={`${styles.button__send__container}`}>
+                <button 
+                onClick={handleClickSubmit}
+                // onClick={(e) => handleClickSubmit(e, true)}
+                 type="submit" className={`${styles.btn__send}`}>
                   Send
                 </button>
                 <div className={`${styles.vertical__line}`}></div>

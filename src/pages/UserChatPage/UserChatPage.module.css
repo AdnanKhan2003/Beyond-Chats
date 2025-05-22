@@ -13,3 +13,29 @@
     justify-content: space-between;
     padding: .1rem 1.2rem 1.2rem;
 }
+
+.userchat__lower {
+    overflow: scroll;
+}
+
+.userchat__lower {
+    scrollbar-width: thin; 
+    scrollbar-color: rgba(214, 214, 245, 0.699) #f8f8f8; 
+  }
+  
+
+.userchat__lower::-webkit-scrollbar {
+    width: .521em;
+    border-radius: .3rem;
+}
+  
+
+.userchat__lower::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 1px rgba(0, 0, 0, .3);
+}
+
+.userchat__lower::-webkit-scrollbar-thumb {
+    background-color: #e6d8e69d;
+    background-color: rgba(214, 214, 245, 0.699);
+    outline: 1px solid #fff6f6;
+}

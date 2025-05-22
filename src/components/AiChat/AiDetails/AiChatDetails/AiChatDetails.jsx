@@ -148,7 +148,6 @@ const AiChatDetails = () => {
           <ul className={`${styles.details__accordion}`}>
             {/* <AccordionList title="Links" Icon={BsFillPeopleFill} label="asd; sdafk" /> */}
             {accordion__lists.map((accordion, i) => {
-              console.log(accordion.title);
               return <AccordionList key={i} title={accordion.title} options={accordion.options} />
             })}
           </ul>

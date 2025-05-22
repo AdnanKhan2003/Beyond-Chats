@@ -1,25 +1,40 @@
 .message {
     display: flex;
+    display: inline-flex;
+
+    justify-content: flex-start;
     align-items: flex-end;
     margin: .81rem 0;
+    /* max-width: 350px;
+    width: 300px; */
 }
 
 .message__sender {
     align-self: flex-end;
+    /* margin-left: auto; */
+    margin-left: 2rem;
 }
 
 .message__receiver {
     align-self: flex-start;
+    margin-right: 2rem;
 }
 
 .message__user__pic {
-    width: 2rem;
-    margin-right: .71rem;
+    width: 4rem;
+    max-width: 33px;
+    margin-right: .7rem;
+    /* margin-right: .71rem; */
 }
 
+
+
 .message__user__pic img {
-    width: 2rem;
-    height: 2rem;
+    /* width: 2rem;
+    height: 2rem; */
+    display: block;
+    width: 100%;
+    height: auto;
     object-fit: cover;
     max-width: 100%;
     border-radius: 50%;

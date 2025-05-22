@@ -14,11 +14,31 @@
     justify-content: space-between;
 }
 
+
 .inbox__messages__container {
     display: flex;
     flex-direction: column;
-    padding: 1.1rem 0rem 8rem;
+    padding: 1.1rem 0rem 0rem;
+    margin-bottom: auto;
     overflow: scroll;
 }
 
+.inbox__messages__container {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(230, 216, 230, 0.62) #f8f8f8; 
+}
 
+
+.inbox__messages__container::-webkit-scrollbar {
+    width: .521em;
+    border-radius: .3rem;
+}
+
+.inbox__messages__container::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 1px rgba(0, 0, 0, .3);
+}
+
+.inbox__messages__container::-webkit-scrollbar-thumb {
+    background-color: #e6d8e69d;
+    outline: 1px solid #fff6f6;
+}

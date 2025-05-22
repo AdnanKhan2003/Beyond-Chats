@@ -10,14 +10,7 @@ import InboxMessage from "../../components/Inbox/InboxMessage/InboxMessage";
 import InboxView from "../../components/Inbox/InboxView/InboxView";
 
 import styles from "./InboxPage.module.css";
-import { useState } from "react";
-
-// UserIcon={tomLogo} userName="John" time={48}>Hey, I wanted to say..<
-// const INBOX__MESSAGE__PROFILES = [
-//   'John', 'Tom', "Francis", "George"
-// ];
-
-// type, userImg, msgContent, status, time 
+ 
 const INBOX__MESSAGE__PROFILES_CONTENT = [
   {
     id: 0,
@@ -77,7 +70,6 @@ const InboxPage = ({ profiles, activeProfileId, onClick }) => {
   return (
     <div className={`${styles.inbox__container}`}>
       <div className={`${styles.inbox__wrapper}`}>
-        <div className="inbox__upper">
           <InboxHeader />
           <InboxFilters />
 
@@ -87,10 +79,9 @@ const InboxPage = ({ profiles, activeProfileId, onClick }) => {
               <InboxMessage key={profile.id} data={profile} activeProfileId={activeProfileId} onClick={onClick} />
             ))}
           </div>
-        </div>
 
-        {/* 4. Layout View */}
         <InboxView />
+        {/* 4. Layout View */}
       </div>
     </div>
   );
