@@ -63,6 +63,10 @@
     margin-right: .85rem;
 }
 
+.aichat__header__right { 
+    cursor: pointer;
+}
+
 @media (max-width: 1151px) {
     .menu__close {
         display: block;
@@ -70,6 +74,7 @@
     }
     .aichat__header__right {
         display: flex;
+        cursor: pointer;
         align-items: center;
     }
 }

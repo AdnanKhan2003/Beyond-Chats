@@ -13,7 +13,7 @@ const AiChatInput = ({ aiChatInput, onChange, onClick }) => {
 
                 <div className={`${styles.aiInput__container}`}>
                     <input onChange={(e) => onChange(e.target.value)} value={aiChatInput} name="aiInput" placeholder="Ask a Question..." className={`${styles.aichat__input}`} id="" />
-                    <span onClick={onClick}>
+                    <span className={styles.btn__send} onClick={onClick}>
                         <GoArrowUp />
                     </span>
                 </div>

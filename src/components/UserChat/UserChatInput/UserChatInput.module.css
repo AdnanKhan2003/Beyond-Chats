@@ -138,6 +138,11 @@
     cursor: pointer;
 }
 
+.button__send__container,
+.button__send__container button {
+    cursor: pointer;
+}
+
 .btn__send {
     background-color: transparent;
     border: none;

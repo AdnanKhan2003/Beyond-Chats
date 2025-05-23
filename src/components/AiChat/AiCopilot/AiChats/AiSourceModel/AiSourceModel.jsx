@@ -6,8 +6,8 @@ import { FaIntercom } from "react-icons/fa";
 import styles from "./AiSourceModel.module.css";
 
 const AiSourceModel = ({  source = 'Public Article', author = 'John', date= '1 day ago', bodyContent, onCopyText  }) => {
-  if(!bodyContent)
-  bodyContent = `We understand that sometimes a purchase may not meet your expectations, and you may need to request a refund. This guide outlines the simple steps to help you navigate the refund process and ensure a smooth resolution to your concern.`;
+  // if(!bodyContent)
+  // bodyContent = `We understand that sometimes a purchase may not meet your expectations, and you may need to request a refund. This guide outlines the simple steps to help you navigate the refund process and ensure a smooth resolution to your concern.`;
 
   return (
     <div className={`${styles.more__info__popup__container}`}>

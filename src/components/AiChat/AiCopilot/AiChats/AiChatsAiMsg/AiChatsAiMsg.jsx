@@ -24,6 +24,10 @@ const AiChatsAiMsg = ({ onCopyText }) => {
     setIsModalVisible(false);
   }; 
 
+  let bodyContent;
+  if(!bodyContent)
+    bodyContent = `We understand that sometimes a purchase may not meet your expectations, and you may need to request a refund. This guide outlines the simple steps to help you navigate the refund process and ensure a smooth resolution to your concern.`;
+
   return (
     <div
       className={`${styles.message__content__box} ${styles.message__content__box__ai}`}
@@ -50,7 +54,7 @@ const AiChatsAiMsg = ({ onCopyText }) => {
             <span
               onMouseEnter={() => handleModalVisible('source')}
              className={`${styles.message__part__more__info}`}>1</span>
-          {isModalVisible === 'source' && <AiSourceModel onCopyText={onCopyText} source="Public Article" />}
+          {isModalVisible === 'source' && <AiSourceModel bodyContent={bodyContent} onCopyText={onCopyText} source="Public Article" />}
           </div>
           <div className={`${styles.message__part}`}>
             To assist you with your refund request, could you please provide
@@ -68,9 +72,9 @@ const AiChatsAiMsg = ({ onCopyText }) => {
             <span
               onMouseEnter={() => handleModalVisible('conversation')}
              className={`${styles.message__part__more__info}`}>2</span>
-          {isModalVisible === 'conversation' && <AiSourceModel onCopyText={onCopyText}  source="Conversation" />}
+          {isModalVisible === 'conversation' && <AiSourceModel bodyContent={bodyContent} onCopyText={onCopyText}  source="Conversation" />}
           </div>
-          <div className={`${styles.message__ai__button__container}`}>
+          <div onClick={() => onCopyText(bodyContent)} className={`${styles.message__ai__button__container}`}>
             <div className={`${styles.btn__left}`}>
               <span>
                 <BiSolidEdit />
