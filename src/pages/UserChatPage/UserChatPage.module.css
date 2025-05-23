@@ -39,3 +39,23 @@
     background-color: rgba(214, 214, 245, 0.699);
     outline: 1px solid #fff6f6;
 }
+
+
+@media (max-width: 1150px) {
+    .userchat__container {
+        max-width: 600px;
+         
+    }
+}
+@media (max-width: 760px) {
+    .userchat__container {
+        max-width: 600px;
+         
+    }
+}
+
+@media (max-width: 600px) {
+    .userchat__container {
+        display: none;
+    }
+}

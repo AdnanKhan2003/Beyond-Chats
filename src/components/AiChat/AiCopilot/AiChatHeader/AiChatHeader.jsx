@@ -1,9 +1,12 @@
 import { FaInbox } from "react-icons/fa6";
 import { BsLayoutSplit } from "react-icons/bs";
+import { IoMdClose } from "react-icons/io";
 
 import styles from "./AiChatHeader.module.css";
 
-const AiChatHeader = ({ onClick, initTab }) => {
+const AiChatHeader = ({ onMenuClick, onMenuClose, onClick, initTab }) => {
+
+
   return (
     <div className={`${styles.aichat__container}`}>
       <div className={`${styles.aichat__wrapper}`}>
@@ -18,9 +21,12 @@ const AiChatHeader = ({ onClick, initTab }) => {
             <p className="tab__name">Details</p>
           </li>
         </ul>
-        <div className="aichat__header__right">
+        <div className={`${styles.aichat__header__right}`}>
           <BsLayoutSplit />
+          <IoMdClose onClick={onMenuClick} className={`${styles.menu__close}`} />
         </div>
+        {/* <div className="aichat__header__mobile">
+        </div> */}
       </div>
     </div>
   );

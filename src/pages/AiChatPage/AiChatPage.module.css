@@ -47,3 +47,43 @@
     background-color: #e6d8e69d;
     outline: 1px solid #fff6f6;
 }
+
+.d__none {
+    display: none;
+    position: relative;
+    left: -307px;
+}
+
+@media (max-width: 1151px) {
+    .aichat__container {
+        opacity: 0;
+        position: absolute;
+        right: 0;
+        opacity: 0;
+        z-index: -234;
+    border-left: 1px solid #ccc;
+    }
+    .d__view {
+        position: absolute;
+        right: 0;
+        opacity: 1;
+        z-index: 2;
+        overflow: scroll;
+    }
+    
+}
+
+
+@media (max-width: 760px) {
+    .aichat__container {
+        position: absolute;
+        right: 0;
+        opacity: 0;
+    }
+    .d__view {
+        position: absolute;
+        right: 0;
+        opacity: 1;
+        z-index: 2;
+    }
+}

@@ -4,19 +4,15 @@ import UserChatInput from "../../components/UserChat/UserChatInput/UserChatInput
 import UserChats from "../../components/UserChat/UserChats/UserChats";
 import styles from "./UserChatPage.module.css";
 
-const UserChatPage = ({ profiles, activeProfileId, onAddMsg, profileInputs, updateProfileInputs }) => {
+const UserChatPage = ({ onMenuClick, profiles, activeProfileId, onAddMsg, profileInputs, updateProfileInputs }) => {
   // const [chatMessage, setChatMessage] = useState();
   
 
-  const handleSubmitMsg = (msg) => {
-    onAddMsg(chatMessage, activeProfileId);
-    
-  };
 
   return (
     <div className={`${styles.userchat__container}`}>
       <div className={`${styles.userchat__wrapper}`}>
-        <UserChatHeader />
+        <UserChatHeader onMenuClick={onMenuClick} />
 
         <div className={`${styles.userchat__lower}`}>
           {/* UserChats */}

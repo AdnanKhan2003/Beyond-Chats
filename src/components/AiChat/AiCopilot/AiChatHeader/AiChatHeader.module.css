@@ -53,3 +53,19 @@
 .tab__icon {
     margin-right: .3rem;
 }
+
+.menu__close {
+    display: none;
+    cursor: pointer;
+}
+
+@media (max-width: 1151px) {
+    .menu__close {
+        display: block;
+        margin-left: .5rem;
+    }
+    .aichat__header__right {
+        display: flex;
+        align-items: center;
+    }
+}

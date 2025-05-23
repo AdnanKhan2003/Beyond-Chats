@@ -34,3 +34,14 @@
 .icon__3 svg {
     margin-right: .31rem;
 }
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+@media (max-width: 1151px) {
+    .hamburger {
+        display: block;
+    }
+}

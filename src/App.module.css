@@ -9,3 +9,20 @@
     max-width: 1150px;
     min-height: 910px;
 }
+
+@media (max-width: 1150px) {
+    .app{
+        position: relative;
+        width: 100%;
+        max-width: 760px;
+    }
+}
+
+@media (max-width: 760px) {
+    .app {
+        width: 100%;
+        margin: 0;
+        padding: 2rem 0;
+        margin-bottom: 0;
+    }
+}

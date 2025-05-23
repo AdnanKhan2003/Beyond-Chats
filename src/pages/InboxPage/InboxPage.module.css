@@ -3,6 +3,7 @@
     border-bottom-left-radius: .3rem;
     background: white;
     max-width: 300px;
+    width: 100%;
     max-height: 750px;
 }
 

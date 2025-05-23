@@ -3,6 +3,7 @@ import { MdChat } from "react-icons/md";
 import { HiMiniBookOpen } from "react-icons/hi2";
 import { FaIntercom } from "react-icons/fa";
 import { BiSolidEdit } from "react-icons/bi";
+
 import { MdOutlineExpandMore } from "react-icons/md";
 
 import aiLogo from "../../../../../assets/images/ai/ai.jpg";
@@ -28,11 +29,12 @@ const AiChatsAiMsg = ({ onCopyText }) => {
       className={`${styles.message__content__box} ${styles.message__content__box__ai}`}
     >
       <div className={`${styles.message__content__box__header}`}>
-        <img
+        {/* <img
           src={aiLogo}
           className={`${styles.message__image} ${styles.message__image__ai}`}
           alt=""
-        />
+        /> */}
+        <FaIntercom />
         <h4 className="name">Fin</h4>
 
         {/* <FaIntercom /> */}

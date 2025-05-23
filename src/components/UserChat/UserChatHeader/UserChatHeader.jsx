@@ -1,10 +1,13 @@
+import { AiOutlineMenu } from "react-icons/ai";
+
 import { BsThreeDots } from "react-icons/bs";
 import { BsFillMoonStarsFill } from "react-icons/bs";
 import { AiFillCloseSquare } from "react-icons/ai";
 
 import styles from "./UserChatHeader.module.css";
 
-const UserChatHeader = () => {
+const UserChatHeader = ({ onMenuClick }) => {
+  
   return (
     <div className={`${styles.userchat__header}`}>
       <nav className={`${styles.userchat__nav}`}>
@@ -21,6 +24,9 @@ const UserChatHeader = () => {
           <span className={`${styles.icon} ${styles.icon__3}`}>
             <AiFillCloseSquare />
             <span>Close</span>
+          </span>
+          <span onClick={onMenuClick} className={`${styles.icon} ${styles.hamburger}`}>
+            <AiOutlineMenu />
           </span>
         </div>
       </nav>
