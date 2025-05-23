@@ -38,3 +38,19 @@
 
 }
 }
+
+@media (max-width: 600px) {
+    .inbox__message {
+        padding: .7rem 1rem;
+    }
+    .message__time {
+        margin-left: auto;
+        padding-right: .5rem;
+    }
+}
+@media (max-width: 300px) {
+    .message__time {
+        margin-left: auto;
+        padding-right: .5rem;
+    }
+}

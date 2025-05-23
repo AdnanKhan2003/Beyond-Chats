@@ -7,16 +7,25 @@
 
 .blank__space,
 .message__content__box__header  {
-    width: 2rem;
-    height: 2rem;
+    /* width: 2rem;
+    height: 2rem; */
     margin-right: .471rem;
+    margin-bottom: 1rem;
     display: flex;
+
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
 }
 
+.blank__space {
+    display: none;
+}
 
 .message__content__box__header svg  {
     font-size: 1.4rem;
-    width: 100%;
+    width: 10%;
+    margin-right: .5rem;
 }
 
 .message__content__box__header .message__image {

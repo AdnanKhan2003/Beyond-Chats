@@ -76,3 +76,9 @@
         opacity: 0;
     }
 }
+
+@media (max-width: 380px) {
+    .userchat__wrapper {
+        padding: .3rem .3rem;
+    }
+}

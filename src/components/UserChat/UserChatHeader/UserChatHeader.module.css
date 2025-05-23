@@ -59,3 +59,10 @@
         display: block;
     }
 }
+
+@media (max-width: 380px) {
+    .icon__2,
+    .icon__3 {
+        display: none;
+    }
+}
