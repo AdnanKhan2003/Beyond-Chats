@@ -3,14 +3,19 @@ import { AiOutlineMenu } from "react-icons/ai";
 import { BsThreeDots } from "react-icons/bs";
 import { BsFillMoonStarsFill } from "react-icons/bs";
 import { AiFillCloseSquare } from "react-icons/ai";
+import { CgArrowLeftO } from "react-icons/cg";
+
 
 import styles from "./UserChatHeader.module.css";
 
-const UserChatHeader = ({ onMenuClick }) => {
+const UserChatHeader = ({ onActivePage, onMenuClick }) => {
   
   return (
     <div className={`${styles.userchat__header}`}>
       <nav className={`${styles.userchat__nav}`}>
+        <div className={`${styles.back__icon__container}`} onClick={() => onActivePage('inbox')}>
+          <CgArrowLeftO />
+        </div>
         <div className="nav__left">
           <h1>John</h1>
         </div>

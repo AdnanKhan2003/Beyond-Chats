@@ -43,3 +43,17 @@
     background-color: #e6d8e69d;
     outline: 1px solid #fff6f6;
 }
+
+@media (max-width: 600px) {
+    .inbox__container {
+        max-height: 700px;
+        max-width: 100%;
+    }
+    .uplift__element {
+        z-index: 23;
+    }
+    .downlift__element {
+        z-index: 1;
+        opacity: 0;
+    }
+}

@@ -11,6 +11,7 @@ const AiChatHeader = ({ onMenuClick, onMenuClose, onClick, initTab }) => {
     <div className={`${styles.aichat__container}`}>
       <div className={`${styles.aichat__wrapper}`}>
         <ul className={`${styles.aichat__header__tabs__container}`}>
+        <IoMdClose onClick={onMenuClick} className={`${styles.menu__close}`} />
           <li onClick={() => onClick('ai')} className={`${styles.tab} ${styles.tab__1} ${initTab ? styles.active : ""}`}>
             <span className={`${styles.tab__icon}`}>
               <FaInbox />

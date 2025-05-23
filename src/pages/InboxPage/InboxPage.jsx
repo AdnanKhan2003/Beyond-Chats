@@ -65,16 +65,17 @@ const INBOX__MESSAGE__PROFILES_CONTENT = [
   },
 ];
 
-const InboxPage = ({ profiles, activeProfileId, onClick }) => {
+const InboxPage = ({ activePage, onActivePage, profiles, activeProfileId, onClick }) => {
 
   return (
-    <div className={`${styles.inbox__container}`}>
+    <div className={`${styles.inbox__container} ${activePage === 'inbox' ? styles.uplift__element : styles.uplift__element}`}>
+    {/* <div onClick={() => onActivePage('inbox')} className={`${styles.inbox__container} ${activePage === 'inbox' ? styles.uplift__element : styles.uplift__element}`}> */}
       <div className={`${styles.inbox__wrapper}`}>
           <InboxHeader />
           <InboxFilters />
 
           {/* 3. Inbox Messages */}
-          <div className={`${styles.inbox__messages__container}`}>
+          <div className={`${styles.inbox__messages__container}`} onClick={() => onActivePage('userchat')} >
             {profiles.map((profile) => (
               <InboxMessage key={profile.id} data={profile} activeProfileId={activeProfileId} onClick={onClick} />
             ))}

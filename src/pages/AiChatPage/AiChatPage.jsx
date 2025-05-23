@@ -10,7 +10,6 @@ const AiChatPage = ({ isMenuOpen, onMenuClick, onCopyText }) => {
   const [aiChatInput, setAiChatInput] = useState();
   const [storedValue, setStoredValue] = useState();
   const [isMenuClosed, setIsMenuClosed] = useState(false);
-console.log(isMenuOpen);
 
 
   const handleTabClick = (id) => {
@@ -38,7 +37,6 @@ console.log(isMenuOpen);
     // <div className={`${styles.aichat__container} ${menuClicked ? styles.d__none : styles.d__view} ${closeMenu ? styles.d__none : styles.d__view}`}>
     
     <div className={`${styles.aichat__container} ${isMenuOpen ? styles.d__view : ''}`}>
-      {console.log('hamburger', isMenuOpen, 'close', isMenuClosed)    }
       <div className={`${styles.aichat__wrapper}`}>
           <AiChatHeader onMenuClick={onMenuClick} onMenuClose={handleMenuCloseClick} onClick={handleTabClick} initTab={initTab} />
         <div className={`${styles.aichat__upper} ${setInitTab ? styles.scroll : ''}`}>

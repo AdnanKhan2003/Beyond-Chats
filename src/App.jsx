@@ -134,6 +134,7 @@ function App() {
   const [activeProfileId, setActiveProfileId] = useState(0);
   const [profileInputs, setProfileInputs] = useState(init__profile__inputs);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activePage, setActivePage] = useState('inbox');
 
   const handleProfileClick = (profileId) => {
     INBOX__MESSAGE__PROFILES_CONTENT.forEach(profile => {
@@ -162,7 +163,9 @@ function App() {
       setProfileInputs(profileInput => ({...profileInput, [activeProfileId]: bodyText}));
     };
 
-    const handleIsMenuOpen = () => {
+    const handleIsMenuOpen = (e) => {
+      console.log(e.stopPropagation);
+      
       console.log(isMenuOpen);
       
       setIsMenuOpen(prevState => !prevState);
@@ -170,10 +173,16 @@ function App() {
       
     };
 
+    const handleActivePageClick = (id) => {
+      console.log(id);
+      
+      setActivePage(id);
+    };
+
   return (
     <div className={styles.app}>
-      <InboxPage profiles={INBOX__MESSAGE__PROFILES_CONTENT} activeProfileId={activeProfileId} onClick={handleProfileClick} />
-      <UserChatPage onMenuClick={handleIsMenuOpen} profileInputs={profileInputs} updateProfileInputs={setProfileInputs} profiles={INBOX__MESSAGE__PROFILES_CONTENT} activeProfileId={activeProfileId} onAddMsg={handleAddMsgToChat} />
+      <InboxPage activePage={activePage} onActivePage={handleActivePageClick} profiles={INBOX__MESSAGE__PROFILES_CONTENT} activeProfileId={activeProfileId} onClick={handleProfileClick} />
+      <UserChatPage activePage={activePage} onActivePage={handleActivePageClick} isMenuOpen={isMenuOpen} onMenuClick={handleIsMenuOpen} profileInputs={profileInputs} updateProfileInputs={setProfileInputs} profiles={INBOX__MESSAGE__PROFILES_CONTENT} activeProfileId={activeProfileId} onAddMsg={handleAddMsgToChat} />
       {/* <UserChatPage copyText={copyText} profileInputs={profileInputs} updateProfileInputs={setProfileInputs} profiles={INBOX__MESSAGE__PROFILES_CONTENT} activeProfileId={activeProfileId} onAddMsg={handleAddMsgToChat} /> */}
       <AiChatPage isMenuOpen={isMenuOpen} onMenuClick={handleIsMenuOpen} onCopyText={handleBodyTextCopy} />
     </div>

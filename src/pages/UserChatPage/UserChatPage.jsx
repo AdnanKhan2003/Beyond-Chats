@@ -4,15 +4,16 @@ import UserChatInput from "../../components/UserChat/UserChatInput/UserChatInput
 import UserChats from "../../components/UserChat/UserChats/UserChats";
 import styles from "./UserChatPage.module.css";
 
-const UserChatPage = ({ onMenuClick, profiles, activeProfileId, onAddMsg, profileInputs, updateProfileInputs }) => {
+const UserChatPage = ({ activePage, onActivePage, isMenuOpen, onMenuClick, profiles, activeProfileId, onAddMsg, profileInputs, updateProfileInputs }) => {
   // const [chatMessage, setChatMessage] = useState();
   
 
 
   return (
-    <div className={`${styles.userchat__container}`}>
+    <div className={`${styles.userchat__container}  ${activePage === 'userchat' ? styles.uplift__element : styles.downlift__element}`}>
+    {/* <div onClick={() => onActivePage('userchat')} className={`${styles.userchat__container}  ${activePage === 'userchat' ? styles.uplift__element : styles.downlift__element}`}> */}
       <div className={`${styles.userchat__wrapper}`}>
-        <UserChatHeader onMenuClick={onMenuClick} />
+        <UserChatHeader onActivePage={onActivePage} isMenuOpen={isMenuOpen} onMenuClick={onMenuClick} />
 
         <div className={`${styles.userchat__lower}`}>
           {/* UserChats */}
