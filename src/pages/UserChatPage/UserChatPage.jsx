@@ -13,7 +13,7 @@ const UserChatPage = ({ activePage, onActivePage, isMenuOpen, onMenuClick, profi
     <div className={`${styles.userchat__container}  ${activePage === 'userchat' ? styles.uplift__element : styles.downlift__element}`}>
     {/* <div onClick={() => onActivePage('userchat')} className={`${styles.userchat__container}  ${activePage === 'userchat' ? styles.uplift__element : styles.downlift__element}`}> */}
       <div className={`${styles.userchat__wrapper}`}>
-        <UserChatHeader onActivePage={onActivePage} isMenuOpen={isMenuOpen} onMenuClick={onMenuClick} />
+        <UserChatHeader username={profiles[activeProfileId].username} onActivePage={onActivePage} isMenuOpen={isMenuOpen} onMenuClick={onMenuClick} />
 
         <div className={`${styles.userchat__lower}`}>
           {/* UserChats */}

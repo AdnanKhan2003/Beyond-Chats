@@ -8,7 +8,7 @@ import { CgArrowLeftO } from "react-icons/cg";
 
 import styles from "./UserChatHeader.module.css";
 
-const UserChatHeader = ({ onActivePage, onMenuClick }) => {
+const UserChatHeader = ({ username, onActivePage, onMenuClick }) => {
   
   return (
     <div className={`${styles.userchat__header}`}>
@@ -17,7 +17,7 @@ const UserChatHeader = ({ onActivePage, onMenuClick }) => {
           <CgArrowLeftO />
         </div>
         <div className="nav__left">
-          <h1>John</h1>
+          <h1>{username}</h1>
         </div>
         <div className={`${styles.nav__right}`}>
           <span className={`${styles.icon} ${styles.icon__1}`}>
