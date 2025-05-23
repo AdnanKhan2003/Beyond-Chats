@@ -140,26 +140,6 @@ function App() {
       } 
     });
   };
-
-  // const handleAddMsgToChat = (chatMsg, activeProfileId) => {
-    // {
-    //   type: 'sender',
-    //   userImg: aliLogo,
-    //   msgContent: "Hey! I just wanted to ask about that talk that we once listened to, Remember? If you then please consider calling me",
-    //   status: 'Seen',
-    //   time: 48,
-    //   timeUnit: 'min',
-    // },
-
-    // const chatMessage = {
-    //   type: 'sender',
-    //   userImg: INBOX__MESSAGE__PROFILES_CONTENT[activeProfileId].UserIcon,
-    //   msgContent: chatMsg,
-    //   status: 'Sent',
-    //   time: Date.now(),
-    //   timeUnit: 'min'
-    // };
-    // INBOX__MESSAGE__PROFILES_CONTENT[activeProfileId].chat.push(chatMessage);
     
     const handleAddMsgToChat = (chatMsg, activeProfileId) => {
       const newMsg = {
@@ -175,14 +155,16 @@ function App() {
       
     };
     
-    
-  // };
+    const handleBodyTextCopy = (bodyText) => {
+      setProfileInputs(profileInput => ({...profileInput, [activeProfileId]: bodyText}));
+    };
 
   return (
     <div className={styles.app}>
       <InboxPage profiles={INBOX__MESSAGE__PROFILES_CONTENT} activeProfileId={activeProfileId} onClick={handleProfileClick} />
       <UserChatPage profileInputs={profileInputs} updateProfileInputs={setProfileInputs} profiles={INBOX__MESSAGE__PROFILES_CONTENT} activeProfileId={activeProfileId} onAddMsg={handleAddMsgToChat} />
-      <AiChatPage />
+      {/* <UserChatPage copyText={copyText} profileInputs={profileInputs} updateProfileInputs={setProfileInputs} profiles={INBOX__MESSAGE__PROFILES_CONTENT} activeProfileId={activeProfileId} onAddMsg={handleAddMsgToChat} /> */}
+      <AiChatPage onCopyText={handleBodyTextCopy} />
     </div>
   )
 }

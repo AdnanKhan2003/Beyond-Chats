@@ -11,7 +11,7 @@ import styles from "./AiChatsAiMsg.module.css";
 import AiSourceModel from "../AiSourceModel/AiSourceModel";
 import { useState } from "react";
 
-const AiChatsAiMsg = () => {
+const AiChatsAiMsg = ({ onCopyText }) => {
   const [isModalVisible, setIsModalVisible] = useState();
 3
   const handleModalVisible = (id) => {
@@ -19,7 +19,7 @@ const AiChatsAiMsg = () => {
 
   }; 
 
-  const handleModalInvisible = (id) => {
+  const handleModalInvisible = () => {
     setIsModalVisible(false);
   }; 
 
@@ -39,15 +39,16 @@ const AiChatsAiMsg = () => {
       </div>
       <div className={`${styles.message__content__box__container}`}>
         <div className={`${styles.blank__space}`}></div>
-        <div className={`${styles.message} ${styles.message__ai}`}>
+        <div 
+        onMouseLeave={handleModalInvisible}
+         className={`${styles.message} ${styles.message__ai}`}>
           <div className={`${styles.message__part}`}>
             We understand that sometimes a purchase may not meet your
             expectations, and you may need to request a refund.
             <span
               onMouseEnter={() => handleModalVisible('source')}
-              onMouseLeave={() => handleModalInvisible('source')}
              className={`${styles.message__part__more__info}`}>1</span>
-          {isModalVisible === 'source' && <AiSourceModel source="Public Article" />}
+          {isModalVisible === 'source' && <AiSourceModel onCopyText={onCopyText} source="Public Article" />}
           </div>
           <div className={`${styles.message__part}`}>
             To assist you with your refund request, could you please provide
@@ -64,9 +65,8 @@ const AiChatsAiMsg = () => {
             automatically issued of Your refund will be you put it in the post.
             <span
               onMouseEnter={() => handleModalVisible('conversation')}
-              onMouseLeave={() => handleModalInvisible('conversation')}
              className={`${styles.message__part__more__info}`}>2</span>
-          {isModalVisible === 'conversation' && <AiSourceModel source="Conversation" />}
+          {isModalVisible === 'conversation' && <AiSourceModel onCopyText={onCopyText}  source="Conversation" />}
           </div>
           <div className={`${styles.message__ai__button__container}`}>
             <div className={`${styles.btn__left}`}>

@@ -2,7 +2,7 @@ import { GoArrowUp } from "react-icons/go";
 
 import styles from './AiChatInput.module.css';
 
-const AiChatInput = ({  }) => {
+const AiChatInput = ({ aiChatInput, onChange, onClick }) => {
 
     return (
         <div className="aichat__input__container">
@@ -12,8 +12,8 @@ const AiChatInput = ({  }) => {
                 </p>
 
                 <div className={`${styles.aiInput__container}`}>
-                    <input  name="aiInput" placeholder="Ask a Question..." className={`${styles.aichat__input}`} id="" />
-                    <span>
+                    <input onChange={(e) => onChange(e.target.value)} value={aiChatInput} name="aiInput" placeholder="Ask a Question..." className={`${styles.aichat__input}`} id="" />
+                    <span onClick={onClick}>
                         <GoArrowUp />
                     </span>
                 </div>

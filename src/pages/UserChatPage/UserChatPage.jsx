@@ -6,6 +6,7 @@ import styles from "./UserChatPage.module.css";
 
 const UserChatPage = ({ profiles, activeProfileId, onAddMsg, profileInputs, updateProfileInputs }) => {
   // const [chatMessage, setChatMessage] = useState();
+  
 
   const handleSubmitMsg = (msg) => {
     onAddMsg(chatMessage, activeProfileId);
@@ -19,7 +20,7 @@ const UserChatPage = ({ profiles, activeProfileId, onAddMsg, profileInputs, upda
 
         <div className={`${styles.userchat__lower}`}>
           {/* UserChats */}
-          <UserChats profiles={profiles[activeProfileId]} />
+          <UserChats profiles={profiles[activeProfileId]}  />
 
           {/* UserChatInput */}
         </div>

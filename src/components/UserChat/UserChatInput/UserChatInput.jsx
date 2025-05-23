@@ -9,6 +9,8 @@ import { useState } from "react";
 
 const UserChatInput = ({ onSubmitMsg, activeProfileId, onInputChange, inputValue }) => {
   // const [chatMessage, setChatMessage] = useState();
+  
+  
 
   const handleClickSubmit = () => {   
     onSubmitMsg(inputValue, activeProfileId);

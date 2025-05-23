@@ -5,7 +5,10 @@ import { FaIntercom } from "react-icons/fa";
 
 import styles from "./AiSourceModel.module.css";
 
-const AiSourceModel = ({  source = 'Public Article', author = 'John', date= '1 day ago'  }) => {
+const AiSourceModel = ({  source = 'Public Article', author = 'John', date= '1 day ago', bodyContent, onCopyText  }) => {
+  if(!bodyContent)
+  bodyContent = `We understand that sometimes a purchase may not meet your expectations, and you may need to request a refund. This guide outlines the simple steps to help you navigate the refund process and ensure a smooth resolution to your concern.`;
+
   return (
     <div className={`${styles.more__info__popup__container}`}>
       <div className={`${styles.more__info__wrapper}`}>
@@ -22,15 +25,12 @@ const AiSourceModel = ({  source = 'Public Article', author = 'John', date= '1 d
         </div>
         <div className={`${styles.popup__body}`}>
           <p className={`${styles.popup__body__content}`}>
-            We understand that sometimes a purchase may not meet your
-            expectations, and you may need to request a refund. This guide
-            outlines the simple steps to help you navigate the refund process
-            and ensure a smooth resolution to your concern.
+            {bodyContent}
           </p>
         </div>
         <div className={`${styles.popup__btn__container}`}>
           <BiSolidEdit />
-          <button>Add to Composer</button>
+          <button onClick={() => onCopyText(bodyContent)}>Add to Composer</button>
         </div>
       </div>
     </div>

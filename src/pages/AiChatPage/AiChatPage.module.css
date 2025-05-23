@@ -29,7 +29,8 @@
     scrollbar-color: rgba(230, 216, 230, 0.62) #f8f8f8;
 
     overflow-y: auto;
-    max-height: 750px; 
+    max-height: 750px;
+    padding-bottom: 2rem; 
 }
 
 
